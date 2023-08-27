@@ -51,39 +51,33 @@ Currently working with SonaType(Maven Host) on deployment 8/27/2023
 ## Examples
 Here are a few examples demonstrating how to use JBoot to schedule and manage system reboots.
 
-### Scheduling an Immediate Reboot
-This section demonstrates how to use the scheduleImmediateReboot() method to initiate an immediate system reboot.
+### Immediate Reboot
+This section demonstrates how to use the `scheduleImmediateReboot()` method to initiate an immediate system reboot.
 ```java
 public static void main(String[] args) {
-    JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);
+    RebootScheduler scheduler = new RebootScheduler();
     scheduler.scheduleImmediateReboot();
 }
 ```
 
-### Scheduling a Custom Reboot
+### Scheduled Reboot
+This section provides an example of scheduling system reboots for a particular time using the RebootScheduler classes `scheduleRebootAt(rebootDate)` method.  
+```java
+public static void main(String[] args) {
+    RebootScheduler scheduler = new RebootScheduler();
+    Date rebootDate = /* Specify a desired reboot date and time */;
+    scheduler.scheduleRebootAt(rebootDate);
+}
+```
+
+### Scheduled Reboot With Restart Customization
 This section illustrates how to use the scheduleProgrammedReboot() method to schedule a system reboot at a specific date and time, along with a custom task to run on reboot.
 ```java
 public static void main(String[] args) {
-    JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);
+    RebootScheduler scheduler = new RebootScheduler(/* Initialize necessary dependencies */);
     Date rebootDate = /* Specify a desired reboot date and time */;
-    String customTask = /* Define a custom task to run on reboot */;
-    scheduler.scheduleCustomReboot(rebootDate, customTask);
-}
-```
-### Managing System Reboots
-This section provides examples of managing scheduled system reboots using various methods from the RebootScheduler class.
-```java
-public static void main(String[] args) {
-    JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);
-    
-    // Check if a scheduled reboot is pending
-    boolean isRebootPending = scheduler.isRebootPending();
-    
-    // Get the time until the next scheduled reboot
-    Duration timeUntilReboot = scheduler.getTimeUntilReboot();
-    
-    // Cancel a pending reboot
-    scheduler.cancelPendingReboot();
+    String customTask = /* Define a custom task to run on reboot (e.g. path/to/App.exe)*/;
+    scheduler.scheduleProgrammedReboot(rebootDate, customTask);
 }
 ```
 ### Contributions

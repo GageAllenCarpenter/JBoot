@@ -70,7 +70,7 @@ public static void main(String[] args) {
     scheduler.scheduleCustomReboot(rebootDate, customTask);
 }
 ```
-###Managing System Reboots
+### Managing System Reboots
 This section provides examples of managing scheduled system reboots using various methods from the RebootScheduler class.
 ```java
 public static void main(String[] args) {
@@ -86,7 +86,7 @@ public static void main(String[] args) {
     scheduler.cancelPendingReboot();
 }
 ```
-###Contributions
+### Contributions
 Contributions to JBoot are welcome! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository and create a new branch for your feature or bug fix.

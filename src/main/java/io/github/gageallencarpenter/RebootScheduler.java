@@ -12,7 +12,6 @@ import java.util.Date;
  * A utility class for scheduling and executing system reboots with optional tasks using PowerShell.
  */
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 public class RebootScheduler {

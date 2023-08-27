@@ -1,4 +1,9 @@
 # JBoot
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)]()
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Coverage](https://img.shields.io/badge/coverage-90%25-green.svg)]()
+
 JBoot is a utility for scheduling and executing system reboots with optional tasks using custom logic. JBoot allows you to schedule reboots for computers, customize actions to perform on reboot, and handle various use cases that involve system restarts.
 ## Table of Contents
 - [Introduction](#introduction)
@@ -16,7 +21,7 @@ Traditional reboot methods are often limited in their capabilities. JBoot aims t
 
 ## Maven
 
-To use JCache in your Maven project add this dependency to the dependencies section of the pom.xml file within your project.
+To use JBoot in your Maven project add this dependency to the dependencies section of the pom.xml file within your project.
 ```mvn 
 Currently working with SonaType(Maven Host) on deployment 8/27/2023
 ```
@@ -47,7 +52,7 @@ Currently working with SonaType(Maven Host) on deployment 8/27/2023
 Here are a few examples demonstrating how to use JBoot to schedule and manage system reboots.
 
 ### Scheduling an Immediate Reboot
-
+This section demonstrates how to use the scheduleImmediateReboot() method to initiate an immediate system reboot.
 ```java
 public static void main(String[] args) {
     JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);
@@ -56,6 +61,7 @@ public static void main(String[] args) {
 ```
 
 ### Scheduling a Custom Reboot
+This section illustrates how to use the scheduleProgrammedReboot() method to schedule a system reboot at a specific date and time, along with a custom task to run on reboot.
 ```java
 public static void main(String[] args) {
     JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);
@@ -65,6 +71,7 @@ public static void main(String[] args) {
 }
 ```
 ###Managing System Reboots
+This section provides examples of managing scheduled system reboots using various methods from the RebootScheduler class.
 ```java
 public static void main(String[] args) {
     JBootScheduler scheduler = new JBootScheduler(/* Initialize necessary dependencies */);

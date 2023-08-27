@@ -74,7 +74,7 @@ public static void main(String[] args) {
 This section illustrates how to use the scheduleProgrammedReboot() method to schedule a system reboot at a specific date and time, along with a custom task to run on reboot.
 ```java
 public static void main(String[] args) {
-    RebootScheduler scheduler = new RebootScheduler(/* Initialize necessary dependencies */);
+    RebootScheduler scheduler = new RebootScheduler();
     Date rebootDate = /* Specify a desired reboot date and time */;
     String customTask = /* Define a custom task to run on reboot (e.g. path/to/App.exe)*/;
     scheduler.scheduleProgrammedReboot(rebootDate, customTask);

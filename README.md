@@ -22,8 +22,12 @@ Traditional reboot methods are often limited in their capabilities. JBoot aims t
 ## Maven
 
 To use JBoot in your Maven project add this dependency to the dependencies section of the pom.xml file within your project.
-```mvn 
-Currently working with SonaType(Maven Host) on deployment 8/27/2023
+```xml
+<dependency>
+    <groupId>io.github.gageallencarpenter</groupId>
+    <artifactId>JBoot</artifactId>
+    <version>1</version>
+</dependency>
 ```
 
 ## Features

@@ -1,19 +1,11 @@
 package io.github.gageallencarpenter;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
 /**
  * A utility class for scheduling and executing system reboots with optional tasks using PowerShell.
  */
-@NoArgsConstructor
-@Getter
-@Setter
 public class RebootScheduler {
     private final Powershell powershell = new Powershell();
 
